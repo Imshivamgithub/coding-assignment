@@ -1,0 +1,18 @@
+html{
+    height: 100vh;
+   
+}
+
+legend{
+    font-size: medium;
+    
+}
+
+form{
+    padding: 1rem;
+}
+
+.custom-css{
+    width: 70%; 
+    padding: 2%;    
+}

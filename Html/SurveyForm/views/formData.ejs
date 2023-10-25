@@ -1,0 +1,47 @@
+<%- include("partials/header"); -%>
+
+<!-- <h1 style="text-align: center">Form Data</h1> -->
+
+
+
+<!-- Button trigger modal -->
+<h6 id="hidep" style="padding: 10px;"> Here You can see data submitted by you</h6>
+<button type="button" id="hideB" onclick="hideButton()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    data 
+  </button>
+  
+  <!-- Modal -->
+  <form method="post" action="/formAction">
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Survey Data</h5>      
+        </div>
+        <!-- user data  -->
+
+        <div class="modal-body">
+        <h6> Name  : <strong> <span>   </span><%= data.name  %></strong> </h6>
+        <h6> Birth  : <strong><span>   </span><%= data.birthdate  %></strong> </h6>
+        <h6> Gender :<strong><span>   </span><%= data.gender  %> </strong> </h6>
+        <h6>  Country :<strong><span>   </span><%= data.country  %></strong>  </h6>
+        <h6> Profession  : <strong><span>   </span><%= data.profession  %> </strong></h6>
+        <h6> email  :<strong> <span>   </span><%= data.email  %> </strong></h6>
+        <h6> Mobile : <strong><span>   </span><%= data.mobile  %></strong> </h6>
+        
+        </div>
+        <div class="modal-footer">
+       <button type="submit" class="btn btn-secondary"  data-bs-dismiss="modal">Close</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+    </form>
+    
+    <script>
+      function hideButton(){
+        document.getElementById("hideB").style.display = 'none' ;
+        document.getElementById("hidep").style.display = 'none' ;
+      }
+    </script>
+<%- include("partials/footer"); -%>

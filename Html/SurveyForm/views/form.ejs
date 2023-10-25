@@ -1,0 +1,65 @@
+<%- include("partials/header"); -%>
+
+
+        <h1 style="text-align: center">Survey Form</h1>
+        
+    <form id="form" class="row g-3" method="post" action="/" >
+        <div class="col-md-6">  
+          <label for="fname" class="form-label">First Name</label>
+          <input type="text" name="fname" class="form-control" id="fname"required>
+        </div>
+        <div class="col-md-6">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" name="lname" required class="form-control" id="lname">
+        </div>
+        <div class="col-md-6">
+            <label for="bithdate" class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control" name="birthdate" id="birthdate" required >
+          </div>
+
+          <fieldset  class="col-md-6">
+            <legend > Gender :</legend>
+            <label class="form-check-label" for="male">
+                <input type="radio"  class="form-check-input" id="male" value="male" name="gender" required> 
+                Male
+            </label>
+            <label class="form-check-label" for="female">
+            <input type="radio"   style="margin-left: 10px;" class="form-check-input" value="female" id="female" name="gender" required>    
+                Female
+            </label> 
+        </fieldset>
+
+         <div class="col-md-6">
+            <label class="form-label" for="country-name">Country</label>
+            <select class="form-select" name="country" id="country" required >
+              <option value="India">India</option>
+              <option value="U.K.">U.K</option>
+              <option value="U.S.A.">U.S.A.</option>
+              <option value="China">China</option>
+              <option value="Australia">Australia</option>
+            </select>
+          </div>
+    
+          <div class="col-md-5">
+            <label for="profession" class="form-label">Profession</label>
+            <input type="text" name="profession" required class="form-control" id="profession">
+          </div>
+
+        <div class="col-md-7">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" required class="form-control" id="email">
+          </div>
+          <div class="col-md-6">
+            <label for="mobile" class="form-label">Mobile Number</label>
+            <input type="number" name="mobile" required class="form-control" id="mobile">
+          </div>
+
+          <div class="d-grid gap-2 d-md-block">
+            <button  id="btnSubmit"  class="btn btn-primary mx-4" type="submit" >Submit</button>
+            <button id="btnReset" class="btn btn-secondary " type="reset" >Reset</button>
+          </div>
+        
+      </form>  
+
+
+      <%- include("partials/footer"); -%>
